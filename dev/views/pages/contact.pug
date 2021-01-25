@@ -1,0 +1,38 @@
+extends ../templates/template
+
+block menu
+    include ../includes/main-menu
+block title
+    h1.title Contact
+block main
+    //- los estilos de este formulario estan en forms.scss conlos estilos originales del form en estos aremos uno diferente
+    //- y en contac.scss estilos generales al este div contact
+    div.contact
+        div.contact__form
+            form(action="#", method="post").form-contact
+                .form-contact__field
+                    input(type="text", name="name" placeholder="Name").form-contact__input
+                    input(type="email", name="email" placeholder="Email").form-contact__input
+                    input(type="text", name="subject" placeholder="Subject").form-contact__input
+                .form-contact__field
+                    textarea(name="message").form-contact__textarea
+            .form-contact___field
+                input(type="submit", value="Enviar").form__submit
+
+        .contact__map
+            iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3265.1918952905207!2d-59.65450748488527!3d-35.07693779019671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc3b3d26085fa9%3A0xd42d57ad34e47ba5!2sVilla%20Moll!5e0!3m2!1ses-419!2sar!4v1584108416741!5m2!1ses-419!2sar', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
+
+
+        .social
+            .social__form
+                i.fab.fa-twitter-square
+                i.fab.fa-twitter-square
+            .social__form
+                i.fab.fa-instagram
+                i.fab.fa-instagram
+            .social__form
+                i.fab.fa-youtube-square
+                i.fab.fa-youtube-square
+            .social__form
+                i.fab.fa-pinterest-square
+                i.fab.fa-pinterest-square

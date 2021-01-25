@@ -1,0 +1,11 @@
+//- EN LOS INCLUDE(CARPETA) AGREGAMOS BLOQUES DE CODIGO HTML QUE SE INCLUIRAN EN VARIAS PAGINAS
+div#login-modal.lightbox
+    form(action="#", method="post")#login-form.form
+        div.form__field
+            label(for="login-email").form__label Email
+            input(type="email", name="email")#login-email.form__input
+        div.form__field
+            label(for="login-password").form__label Password
+            input(type="password", name="password")#login-password.form__input
+        div.form__field
+            input(type="submit", name="button", value="Enviar").form__submit

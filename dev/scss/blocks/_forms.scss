@@ -1,0 +1,116 @@
+.form
+{
+    background-color: $dark-color;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+
+    &__field
+    {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__label,
+    &__input
+    {
+        width: 100%;
+        margin-bottom: 1rem;
+        background: none;
+        border: none;
+        outline: none;
+        color: $text-color;
+    }
+
+    &__input
+    {
+        border-bottom: 1px solid $text-color;
+    }
+    &__submit
+    {
+        display: inline-block;
+        padding: .5rem 1rem;
+        color: $text-color;
+        background-color: $primary-color;
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        transition: transform .3s;
+        
+        &:active,&focus
+        {
+            transform: scale(0.9);
+        }
+    }
+
+}
+
+// ESTILOS DE FORMULARIO DE CONTACTO 
+.form-contact
+{
+    display: grid;
+    gap: 30px;
+    width: 320px;//maximo para mobil de ancho
+    margin: 0 auto;
+    justify-items: center;
+    padding-top: 2rem;
+
+    @include laptop
+    {
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 auto 2rem;//0 arriba y abajo auto a los lados y 2 rem abajo
+        width: 70%;
+    }
+
+    &__field
+    {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__input,
+    &__textarea
+    {
+        height: 40px;
+        background-color: $dark-color;
+        color: $text-color;
+        outline: none;
+        padding-left: .5rem;
+    }
+    
+    &__input::placeholder
+    {
+        color: $text-color;
+    }
+    &__textarea
+    {
+        // resize: none;
+        width: 320px;
+        height: 150px;
+        padding: .5rem;
+        margin-bottom: 2rem;
+    }
+    @include laptop
+    {
+        &__textarea
+        {
+            min-height: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+.main-menu
+{
+    @include reset-list;
+    border-top: 1px solid $dark-color;
+    background-color: $dark-color-2;
+
+    &__item
+    {
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.5;
+        border-bottom: 1px solid $dark-color;
+
+        @include laptop
+        {
+            line-height: 3;
+            border: none;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__link
+    {
+        text-decoration: none;
+        color:  $text-color;
+        display: block;
+    }
+    &__link:hover
+    {
+        background-color: $text-color;
+        color: $dark-color;
+    }
+    
+    @include laptop
+    {
+        border: none;
+        height: 100vh;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: transparent;
+        font-size: 1rem;
+    }
+}

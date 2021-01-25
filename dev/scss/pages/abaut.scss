@@ -1,0 +1,58 @@
+.abaut
+{
+    @include laptop
+    {
+        display: grid;
+        // el 60& para la imagen y el 40% para el texto
+        grid-template-columns: 60% 40%;
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        height: 60vh;
+        
+
+        &__img,
+        &__text
+        {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        &__img
+        {
+            left: 0;
+            width: 50%;
+            top: 0;
+        }
+        &__text
+        {
+            left: 50%;
+            width: 50%;
+            font-size: 1.1rem;
+            top: 0;
+            padding: 0 2rem;
+        }
+        & h1
+        {
+            margin: 0;
+        }
+    }
+}
+
+// le dimos opacity a las imagenes y texto de 0  para q se oculten y en esta clase las ponemos visibles solo la primer imgagen
+// texto dandole la clase en scss/page/abaut.scss 
+.show
+{
+    opacity: 1;
+}
+
+.controls
+{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: $text-color;
+}

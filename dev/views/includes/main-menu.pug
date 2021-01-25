@@ -1,0 +1,10 @@
+//- EN LOS INCLUDE(CARPETA) AGREGAMOS BLOQUES DE CODIGO HTML QUE SE INCLUIRAN EN VARIAS PAGINAS
+nav#main-nav.main-nav
+    ul#main-menu.main-menu
+        each page in pages  
+            li.main-menu__item
+                //- SI EL PRIMER LINK ES UNA RRAY ASIQ ES 0 ENTONCES QUE ME DIRIGA A LA RAIZ OSEA EL INDEX.HYML
+                if index==0
+                    a(href='/').main-menu__link=page
+                else
+                    a(href=`/${page}.html`).main-menu__link=page

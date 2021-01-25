@@ -1,0 +1,15 @@
+.title
+{
+    padding: 0 0 .5rem;//0 arriba 0 a los lados y 0.5 a los lados
+    border-bottom: 1px solid $text-color;
+    text-align: left;
+
+    @include laptop
+    {
+        padding: 0;
+        padding-bottom: .5rem;
+        // text-align: center;
+        padding-top: .5rem;
+        border-top: 1px solid $text-color;
+    }
+}

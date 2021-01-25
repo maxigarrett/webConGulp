@@ -1,0 +1,46 @@
+.gallery
+{
+   display: grid; 
+   grid-template-columns:repeat(1,1fr) ;
+   gap: 20px 0px;
+   &__item
+   {
+       width: 380px;
+       height: 201px;
+       overflow: hidden;
+       border-radius: 10px;
+       margin-left: 3rem;
+   }
+   &__item img
+   {
+       max-width: 100%;
+       min-height: 100%;
+   }
+   @include laptop
+   {
+        grid-template-columns: repeat(3,350px);
+        //  grid-auto-flow: dense;
+        gap: 20px 0px;
+        &__item
+        {
+            width: 380px;
+            height: 201px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-left: 0;
+            transition: transform .4s;
+        }
+        &__item img
+        {
+            max-width: 100%;
+            min-height: 100%;
+        }
+        &__item:hover
+        {
+            transform: scale(1.04);
+            filter: drop-shadow(2px -2px 19px  white);
+        }
+   }
+
+
+}

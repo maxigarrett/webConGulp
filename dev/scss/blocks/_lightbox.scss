@@ -1,0 +1,20 @@
+.lightbox
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000000, .7);//con scss no hace falta especficar muchos valores en el rgba solo color y transparencia
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);//lo ocultamos por completo
+    transition: transform 0.3s;
+
+    &--show
+    {
+        transform: scale(1);//cuando agregemos esta clase al hacer clic desde JS se mostrara por scale(1)
+    }
+}

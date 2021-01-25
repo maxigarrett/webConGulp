@@ -1,0 +1,13 @@
+div#register-modal.lightbox
+    form(action="#", method="post")#register-form.form
+        div.form__field
+            label(for="register-email").form__label Email
+            input(type="email", name="email")#register-email.form__input
+        div.form__field
+            label(for="register-password").form__label Password
+            input(type="password", name="password")#register-password.form__input
+        div.form__field
+            label(for="register-password-2").form__label Password
+            input(type="password", name="password")#register-password-2.form__input
+        div.form__field
+            input(type="submit", name="button", value="Register").form__submit

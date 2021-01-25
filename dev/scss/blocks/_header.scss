@@ -1,0 +1,14 @@
+// COMO EL HEADER Y ASIDE SE VAN A REPETIR EN VARIAS PAGINA SE CONSIDERA UN BLOQUE POR LO CUAL VA EN LA CARPETA BLOCK
+// DE SCSS
+.header
+{
+    padding: 1em 0;
+    @include laptop
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-column: 2 / -1;
+        grid-row: 1/2;
+    }
+}

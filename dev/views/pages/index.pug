@@ -1,0 +1,32 @@
+extends ../templates/template
+
+block menu
+    include ../includes/main-menu
+
+block title
+    h1.title Home
+
+block main
+    div#gallery.gallery
+        .gallery__item
+            img(src="assets/img/gallery/1.jpg", alt="img 1")
+        .gallery__item
+            img(src="assets/img/gallery/2.jpg", alt="img 2")
+        .gallery__item
+            img(src="assets/img/gallery/3.jpg", alt="img 3")
+        .gallery__item
+            img(src="assets/img/gallery/4.jpg", alt="img 4")
+        .gallery__item
+            img(src="assets/img/gallery/5.jpg", alt="img 5")
+        .gallery__item
+            img(src="assets/img/gallery/1.jpg", alt="img 1")
+        .gallery__item
+            img(src="assets/img/gallery/2.jpg", alt="img 2")
+        .gallery__item
+            img(src="assets/img/gallery/3.jpg", alt="img 3")
+        .gallery__item
+            img(src="assets/img/gallery/4.jpg", alt="img 4")
+        .gallery__item
+            img(src="assets/img/gallery/5.jpg", alt="img 5")
+block scripts
+    script(src="/js/macy.js")

@@ -1,0 +1,32 @@
+// HAY QUE RESPETAR EL ORDEN ASIQ LO PRIMERO VA A SER RESETEAR LOS ETILOS DEL NAVEGADOR
+
+//GUIAS DE ESTILOS
+@import "config/colors";
+@import "config/fonts";
+
+
+//MIXINS
+@import "mixins/breackpoint.scss";//los mixins arriba de todo para que no de error
+@import "mixins/reset-list.scss";
+
+//ESTILOS BASES
+@import "base/normalize.scss";
+@import "base/base.scss";
+
+//ESTYLOS BLOQUES
+@import "blocks/header.scss";
+@import "blocks/topbar";
+@import "blocks/toogle-menu";
+@import "blocks/menu";
+@import "blocks/logo";
+@import "blocks/aside.scss";
+@import "blocks/main.scss";
+@import "blocks/lightbox";
+@import "blocks/forms";
+@import "blocks/titles";
+@import "blocks/images";
+@import "blocks/social";
+
+//pages
+@import "pages/abaut.scss";
+@import "pages/contac";

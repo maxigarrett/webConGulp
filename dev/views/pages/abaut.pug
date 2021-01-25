@@ -1,0 +1,28 @@
+extends ../templates/template
+
+block menu
+    include ../includes/main-menu
+block title
+    h1.title Abaut
+    div.abaut
+        div.abaut__img.show
+            img(src="assets/img/about.jpg", alt="img")
+        div.abaut__text.show
+            h1 Title 1
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum accusantium veritatis voluptas ut inventore 
+            explicabo aut blanditiis odio itaque magni! Porro sequi nobis eius officiis et ipsum tempora dolorum! Sint.
+        div.abaut__img
+            img(src="assets/img/about2.jpg", alt="img")
+        div.abaut__text
+            h1 Title 2
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum accusantium veritatis voluptas ut inventore 
+            explicabo aut blanditiis odio itaque magni! Porro sequi nobis eius officiis et ipsum tempora dolorum! Sint.
+        div.abaut__img
+            img(src="assets/img/about2.jpg", alt="img")
+        div.abaut__text
+            h1 Title 3
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum accusantium veritatis voluptas ut inventore 
+            explicabo aut blanditiis odio itaque magni! Porro sequi nobis eius officiis et ipsum tempora dolorum! Sint.
+    div.controls
+        i.fas.fa-chevron-circle-left#prev
+        i.fas.fa-chevron-circle-right#next

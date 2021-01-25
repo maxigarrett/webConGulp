@@ -1,0 +1,16 @@
+// ESTYLOS BASE DE NUESTRA WEB ESTO VA REDIRIGIDO AL STYLES.CSS Y DE AHI LEEMOS TODO
+body
+{
+    background-color: $background-color;
+    color: $text-color;
+    min-height: 100vh;
+    font-family: $main-font,'sans-serif';
+    
+    //para llamar al mixin se hace con include
+    @include laptop
+    {
+        display: grid;
+        grid-template-columns: 15% 95%;
+        grid-template-rows: 60px 1fr;
+    }
+}

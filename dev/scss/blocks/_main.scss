@@ -1,0 +1,12 @@
+.main
+{
+    padding: .5rem .5rem;
+    @include laptop
+    {
+        grid-column: 2/-1;
+        grid-row: 2/-1;
+        padding: 0 2rem;
+    }
+
+    
+}

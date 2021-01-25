@@ -1,0 +1,39 @@
+// es como una funcion de cualquier lenguaje pero es de SCSS
+
+// variables para las mediaqueris
+$mobile:360px;
+$tablet:361px;
+$laptop:1024px;//pc
+$pc:1400px;//pc hd
+
+
+@mixin mobile  //es lo mismo que decir en javascript const mobile
+{
+    @media screen and (max-width: $mobile)
+    {
+        @content;//esto lo que hace es que cuando llamamemos a la funcion en otro archivo y escribamos scss se coloque aca dentro
+    }
+}
+
+@mixin tablet 
+{
+    @media screen and(min-width: $table)
+    {
+        @content;
+    }    
+}
+
+@mixin laptop 
+{
+    @media screen and(min-width: $laptop)
+    {
+        @content;
+    }    
+}
+@mixin pc 
+{
+    @media screen and(min-width:$pc)
+    {
+        @content;
+    }    
+}

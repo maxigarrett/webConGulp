@@ -1,0 +1,46 @@
+//- para que a la hora de traer el bloque que creamos osea la parte del nav llamado block menu recorre un array que si
+//- no traemos de config no andara
+include ../config/config
+//- esto seria la plantilla osea el template y lo redirigomos al index dentro de "pages" con un exteds
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        //-esto se compila en la carpeta public en codigo normal si estos motores de plantilla por lo tanto a la hs de llamar
+        //- la ruta de css o lo que fuera lo tendremos que llamar por css y no scss que es lo que usamos en la capeta dev
+        //- donde trabajamos
+        link(rel="stylesheet", href="../css/styles.css")
+        script(src="https://kit.fontawesome.com/a7c9296c8e.js", crossorigin="anonymous")
+        title Document
+    body
+        header#header.header
+            a(href="/").logo
+                img(src="./assets/img/logo.png", alt="logo-camara")
+            div#topbar.topbar
+                div.topbar__icon(data-type="login")
+                    i.fa.fa-user
+                    span log in
+                div.topbar__icon(data-type="register")
+                    i.fa.fa-user-plus
+                    sapn Register
+                div.toggle-menu
+                    div#toggle-menu.toggle-menu__icon
+                        div.first-bar
+                        div.second-bar
+                        div.third-bar
+                        
+        div#asidebar.asidebar 
+            //- dentro de aside van los links creados que estan en la carpeta includes
+            block menu
+        
+        main.main
+            block title 
+            block main
+
+        //- incluimos el formulario
+        include ../includes/login-modal
+        include ../includes/register-modal
+        block scripts
+
+        script(src="js/scripts-min.js")

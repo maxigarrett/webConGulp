@@ -1,0 +1,38 @@
+.topbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;//de todo el ancho 
+    position: fixed;//para que cuando agamos scroll la barra nos siga hacia abajo
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:$dark-color-2;
+    cursor: pointer;
+    height: 50px;
+    padding-left: 60px;
+    z-index: 100;
+    
+    &__icon//es lo mismo que escribir .topbar__icon el '&' equivale al padre y podemos escribir dentro del padre sin salir fuera
+    {
+        width: 90px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @include laptop
+    {
+        height: 60px;
+        left: 100%;
+        width: 35vw;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        background-color: transparent;
+    }
+    @include pc
+    {
+        width: 25vw;
+    }
+
+}
